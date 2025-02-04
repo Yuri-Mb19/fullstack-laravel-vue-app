@@ -26,3 +26,8 @@ Route::prefix('v1')->middleware('jwt.auth')->group(function() {
 
 Route::post('login', 'App\Http\Controllers\AuthController@login');
 
+Route::apiResource('cliente','App\Http\Controllers\ClienteController');
+Route::apiResource('carro','App\Http\Controllers\CarroController');
+Route::apiResource('locacao','App\Http\Controllers\LocacaoController');
+Route::apiResource('marca','App\Http\Controllers\MarcaController');
+Route::apiResource('modelo','App\Http\Controllers\ModeloController');
