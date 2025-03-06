@@ -37,11 +37,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Clientes</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Locaçoes</a>
+                                <a class="nav-link" href="#">Locações</a>
                             </li>
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Veiculos</a>
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Veículos</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">Carros</a>
                                     <div class="dropdown-divider"></div>
@@ -91,6 +93,14 @@
             </div>
         </nav>
 
+        @auth
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('home')}}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{Route::currentRouteName()}}</li>
+                </ol>
+            </nav>
+        @endauth
         <main class="py-4">
             @yield('content')
         </main>
